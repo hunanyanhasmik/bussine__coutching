@@ -1,0 +1,66 @@
+@import "../global.scss";
+@import "../variables.scss";
+
+
+
+footer {
+    padding: 32px 0;
+    background: $darkGrey;
+    box-shadow: 0px 5px 20px rgba(31, 32, 65, 0.2);
+
+    .container {
+        .footer__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 0;
+                color: $white;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .social__media {
+                display: flex;
+                gap: 40px;
+
+                a {
+                    svg {
+                        path {
+                            transition: 0.3s;
+                        }
+                    }
+
+                    &:hover {
+                        svg {
+                            path {
+                                fill: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $mobileM) {
+            .footer__content {
+                p {
+                    font-size: 12px;
+                }
+                .social__media {
+                    gap: 24px;
+                }
+            }
+        }
+        @media screen and (max-width: $mobileXS) {
+            .footer__content {
+                p {
+                    font-size: 8px;
+                }
+                .social__media {
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

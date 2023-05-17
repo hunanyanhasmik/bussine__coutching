@@ -1,0 +1,130 @@
+@import"./variables.scss";
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+
+    @media screen and (max-width: $desktop) {
+        padding: 0 32px;
+
+        .btn {
+            padding: 8px 16px;
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: $tabletL) {
+        .title {
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (max-width: $mobileM) {
+        .title {
+            font-size: 24px;
+        }
+
+        .title_cursive {
+            font-size: 40px;
+        }
+
+        .content__info {
+            font-size: 12px;
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobileS) {
+        .btn {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: $mobileXS) {
+        .btn {
+            &.free__resourses {
+                padding: 8px;
+                border-radius: 50%;
+            }
+            span {
+                display: none;
+            }
+
+            svg {
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobileXS) {
+        .title {
+            font-size: 18px;
+        }
+        .content__info {
+            font-size: 10px;
+            margin: 0 0 16px;
+        }
+    }
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    padding: 12px 24px;
+    background: $mainColor;
+    border-radius: $br;
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+    font-size: 17px;
+    color: $white;
+    cursor: pointer;
+    transition: $transition;
+
+    svg {
+        display: none;
+    }
+
+    &:hover {
+        background: $yellow;
+    }
+}
+
+.title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    color: $grey;
+    margin: 0 0 32px;
+
+    .title_cursive {
+        margin: 0 12px 0 0;
+        font-size: 64px;
+        font-family: 'Dancing Script', cursive;
+        color: $mainColor;
+    }
+}
+
+.content__info {
+    color: $black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    margin: 0 0 24px;
+
+    span {
+        font-size: 22px;
+        color: $mainColor;
+    }
+}
+
+
+.block__cursive {
+    display: block;
+}
